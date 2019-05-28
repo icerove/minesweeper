@@ -1,0 +1,37 @@
+.cell {
+  font-size: 2em;
+  width:50px;
+  height:50px;
+  border: 1px #9191eb solid;
+}
+
+.close {
+  background-color: gray;
+}
+
+.open {
+  background-color: lightgray;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-column-gap: 0;
+}
+
+.board-wrapper{
+  display: inline-block;
+}
+
+.dialog {
+  font-size: 2.5em;
+  color: #7700ff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.restart {
+  font-size: 1em;
+  background-color: aliceblue;
+}
