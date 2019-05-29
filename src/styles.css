@@ -1,22 +1,45 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  font-size:2em;
+  color: rgb(255, 128, 128);
+}
+
 .cell {
-  font-size: 2em;
+  font-size: 1.5em;
   width:50px;
   height:50px;
-  border: 1px #9191eb solid;
+  border: 1px rgb(145, 145, 235) solid;
+  box-shadow:5px 10px 18px gray;
+}
+
+.cell:hover{
+  background-color: rgb(231, 137, 173);
+}
+
+.cell:active {
+  background-color: rgb(230, 101, 150);
+  box-shadow: 0 5px rgb(102, 102, 102);
+  height: 95%;
+  width:95%;
 }
 
 .close {
-  background-color: gray;
+  background-color: rgb(232, 163, 190);
 }
 
 .open {
-  background-color: lightgray;
+  background-color: rgb(245, 214, 226);
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(10, auto);
-  grid-column-gap: 0;
+  background-color: rgb(224, 148, 210,0.7);
+  border:2px rgb(145, 145, 235) solid;
+  border-radius: 4px;
 }
 
 .board-wrapper{
@@ -25,13 +48,15 @@
 
 .dialog {
   font-size: 2.5em;
-  color: #7700ff;
+  color: rgb(255, 128, 128);
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
 .restart {
-  font-size: 1em;
+  font-size: 0.5em;
+  color:rgb(128, 128, 255);
   background-color: aliceblue;
+  border-radius: 50%;
 }

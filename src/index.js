@@ -113,7 +113,7 @@ class Board extends React.Component{
 
   render() {
     let cells = this.state.board.map((s, i) => (
-      <button className={s>=0?"cell open animated rubberBand":"cell close"} key={i}
+      <button className={s>=0?"cell open animated zoomIn":"cell close"} key={i}
        onClick={this.handleChange(i)}
        onContextMenu={this.handleFlag(i)}>
         {s>0?
@@ -126,12 +126,13 @@ class Board extends React.Component{
     let message = this.state.gameStatus=='gameover' ? 'Game Over' : 'You win'
     return (
       <div className="board-wrapper">
+        <h1>MineSweeper Game</h1>
         <div className="board">
           {cells}
         </div>
 
         {showDialog &&
-          <div className="dialog">
+          <div className="dialog animated tada">
             <p>{message}</p>
             <button className="restart" onClick={this.restart}>Restart</button>
           </div>}
