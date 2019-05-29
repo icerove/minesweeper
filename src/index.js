@@ -113,7 +113,7 @@ class Board extends React.Component{
 
   render() {
     let cells = this.state.board.map((s, i) => (
-      <button className={s>=0?"cell open":"cell close"} key={i}
+      <button className={s>=0?"cell open animated rubberBand":"cell close"} key={i}
        onClick={this.handleChange(i)}
        onContextMenu={this.handleFlag(i)}>
         {s>0?
